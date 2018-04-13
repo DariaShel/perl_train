@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 use strict;
-my $n = <STDIN>;
-chomp $n;
-my $k = <STDIN>;
-chomp $k;
-print $k%$n;
+my $v = <STDIN>;
+chomp $v;
+my $t = <STDIN>;
+chomp $t;
+print (($v*$t)%109);
