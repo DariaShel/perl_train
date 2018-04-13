@@ -1,7 +1,9 @@
 #!/usr/bin/perl -w
 use strict;
-my $a = <STDIN>;
-chomp $a;
-my $b = <STDIN>;
-chomp $b;
-print sqrt($a**2+$b**2);
+my $n = <STDIN>;
+chomp $n;
+my $k = <STDIN>;
+chomp $k;
+my $r = $k%$n;
+my $x = ($k-$r) / $n;
+print $x;
