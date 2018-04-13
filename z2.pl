@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 use strict;
 my $i;
-for($i=10;$i<100;$i++){
-	if($i==2*($i%10)*(($i-$i%10)/10)){print $i.' ';}
+for($i=100;$i<1000;$i++){
+	if($i==($i**2)%1000){print $i.' ';}
 }
 
