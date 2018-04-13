@@ -1,13 +1,14 @@
 #!/usr/bin/perl -w
 use strict;
-my $n = <STDIN>;
-chomp $n;
-my $i;
-my $sum = 0;
-for($i=0;$i<$n;$i++){
-	my $x = <STDIN>;
-	chomp $x;
-	$sum += $x;
+my $a = <STDIN>;
+chomp $a;
+my $b = <STDIN>;
+chomp $b;
+while($a%2!=0){
+	$a+=1;
 }
-print $sum;
+while($a<=$b){
+	print $a.' ';
+	$a+=2;
+}
 
