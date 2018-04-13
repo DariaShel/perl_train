@@ -7,4 +7,4 @@ chomp $b;
 my $c = <STDIN>;
 chomp $c;
 if(($a+$b>$c)and($a+$c>$b)and($c+$b>$a)){print 'YES';}
-else{print 'NO';}
+else{print 'NO';} 
