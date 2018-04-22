@@ -3,9 +3,12 @@ use strict;
 my $n = <STDIN>;
 chomp $n;
 my $i;
+my $tmp = 0;
 foreach $i (split('',$n)){
-    if($i eq '1'){
-        $i = "one";
-    }
-    print $i;
+	if($tmp%3 == 0){
+		$i = "";
+	}
+	$tmp += 1;
+	print $i;
 }
+
