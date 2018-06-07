@@ -2,16 +2,15 @@
 use strict;
 my $str = <STDIN>;
 chomp $str;
-my @arr = split(" ",$str);
-my $i;
-my $max = 0;
-my $tmp;
-foreach $i (@arr){
-	if($max < length($i)){
-		$max = length($i);
-		$tmp = $i;
-	}
+my @arr = split("",$str);
+my $i = 0;
+my $j = length($str)-1;
+while(($j>$i)and($arr[$i] eq $arr[$j])){
+	$i++;
+	$j--;
 }
-print $tmp,"\n",$max;
+if($j>$i){print "no";}
+else{print "yes";}
+
 
 
