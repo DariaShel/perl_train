@@ -2,14 +2,13 @@
 use strict;
 my $str = <STDIN>;
 chomp $str;
-my @arr = split(" ",$str);
-my $str1 = join("",@arr);
-@arr = split("",$str1);
-my $i = 0;
-my $j = length($str1)-1;
-while(($j>$i)and($arr[$i] eq $arr[$j])){
-	$i++;
-	$j--;
+my $key = <STDIN>;
+chomp $key;
+my @arr = split("",$str);
+my $i;
+foreach $i (@arr){
+	if(ord($i)-$key < 65){$i = chr(ord("Z")-(65-(ord($i)-$key)-1));}
+	else{$i = chr(ord($i)-$key);}
 }
-if($j>$i){print "no";}
-else{print "yes";}
+$str = join("",@arr);
+print $str;
