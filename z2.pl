@@ -2,13 +2,15 @@
 use strict;
 my $n = <STDIN>;
 chomp $n;
-my $i;
-my $tmp = 0;
-foreach $i (split('',$n)){
-	if($tmp%3 == 0){
-		$i = "";
-	}
-	$tmp += 1;
-	print $i;
+my $res;
+if((ord($n)>=97)and(ord($n)<=122)){
+	$res = chr(ord($n)-32);
 }
+elsif((ord($n)>=65)and(ord($n)<=90)){
+	$res = chr(ord($n)+32);
+}
+else{
+	$res = $n;
+}
+print $res;
 
