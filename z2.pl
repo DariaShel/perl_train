@@ -3,14 +3,13 @@ use strict;
 my $str = <STDIN>;
 chomp $str;
 my @arr = split("",$str);
-my $i = 0;
-my $j = length($str)-1;
-while(($j>$i)and($arr[$i] eq $arr[$j])){
-	$i++;
-	$j--;
+my $i;
+my $j;
+for($i=0;$i<length($str);$i++){
+	for($j=$i+1;$j<length($str);$j++){
+		if($arr[$i] eq $arr[$j]){
+			print $arr[$i];
+			last;
+		}
+	}
 }
-if($j>$i){print "no";}
-else{print "yes";}
-
-
-
